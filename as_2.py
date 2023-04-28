@@ -52,7 +52,6 @@ approx = newton_forward(x, y, xi, 2)
 print(f"The 2 degree polynomial approximation for f({xi}) is {approx:.6f}, which is the most accurate.")
 
 # Using the divided difference method, print out the Hermite polynomial approximation matrix:
-
 def hermite_polynomial(x, f, fp):
     n = len(x)
     Q = [[0 for i in range(2*n)] for j in range(2*n)]
@@ -61,5 +60,4 @@ def hermite_polynomial(x, f, fp):
         Q[2*i+1][0] = f[i]
         Q[2*i+1][1] = fp[i]
         if i != 0:
-            Q[2*i][1] = (Q[2*i][0] - Q[2*i-1][0]) / (x[i] - x[i-1])
-    for j in range(2, 2*n
+            Q[2*i][1] = (Q[2*i][0] - Q[2*i-1
